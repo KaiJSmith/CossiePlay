@@ -1,0 +1,195 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<style type="text/css">
+	body {
+		size: 100%;
+		font-family: Arial;
+		margin-left: 9%;
+		background-image: url("http://i.imgur.com/g6HlREg.png");
+		background-size: 100%
+	}
+	#logo { 
+		size: 100%;
+		margin-left: 10%;
+		margin-top: 1%;
+		max-width: 100%;
+		height: auto;
+	}
+	#sidepanel {
+		size: 100%;
+		margin-top: 2%;
+		background-color: white;
+		color: black;
+		text-align: center;
+		position: absolute;
+		top: 80px;
+		left: 20px;
+	}
+	#basic {
+		margin-top: 1%;
+		margin-left: 10%;
+		border: 2px solid;
+		width: 70%; 
+		text-align: left;
+	}
+	#announcementtextwrapper {
+		margin-top: 1%;
+		margin-left: 10%;
+		width: 70%;
+		height: 80%;
+		text-align: center;
+		border: 2px solid;
+	}
+	img {
+    	border: 1px solid #ddd;
+    	border-radius: 4px;
+    	padding: 5px;
+	}
+	h1 {
+		text-align: center;
+	}
+	td {
+		text-align: center;
+	}
+	table {
+		width: 100%
+	}
+	a:link {
+		color:red
+	}
+	a:hover {
+		color:#F76A6C
+	}
+	a:visited {
+		color:#600304
+	}
+</style>
+<title>CossiePlay - Costumes</title>
+</head>
+
+<body>
+<div id="logo"> 
+<img src="http://i.imgur.com/2YKYJ48.png">
+</div>
+<div id="sidepanel">
+<table border="6" style="width:150px">
+	<tr>
+    <td><a href="HomePage.html">Home</a></td>
+    </tr>
+   	<tr>
+    <td><a href="CostumesPage.html">Costumes</a></td>
+    </tr>
+   	<tr>
+    <td><a href="EventInformationPage.html">Event Information</a></td>
+    </tr>
+    <tr>
+    <td><a href="GalleryPage.html">Gallery</a></td>
+    </tr>
+   	<tr>
+    <td><a href="ContactPage.html">Contact</a></td>
+    </tr>
+
+</table>
+</div>
+<div id="announcementtextwrapper">
+<b>ANOUNCEMENT:</b>
+<p>We have some cool things happening that we want people to know about: this month you can purchase 3 drinks for the price of 2 at the bar.
+First-time party-goers get a 50% discount on entry
+If you get a costume custom made, your next party entry is free if you wear that costume.
+Wear your costume in to KFC on Stanton street and you can get a free drink with a 21-piece bucket. Tell them you’ve been to CossiePlay!</p>
+
+</div>
+<div id="basic">
+<h1>Second-hand Costumes For Sale</h1>
+<table border="1px solid black">
+<tr>
+<td><b>Costume</b></td>
+<td><b>Size</b></td>
+<td><b>Price</b></td>
+</tr>
+<tr>
+<td>Spiderman</td>
+<td>12</td>
+<td>$49</td>
+</tr>
+<tr>
+<td>Elf</td>
+<td>16</td>
+<td>$35</td>
+</tr>
+<tr>
+<td>Darth Vader</td>
+<td>M</td>
+<td>$149</td>
+</tr>
+<tr>
+<td>Iron Man (With Rocket Boots)</td>
+<td>M</td>
+<td>$2500</td>
+</tr>
+<tr>
+<td>BayonettaM</td>
+<td>8</td>
+<td>$300</td>
+</tr>
+<tr>
+<td>Diablo III - Demon Hunter</td>
+<td>10</td>
+<td>$250</td>
+</tr>
+<tr>
+<td>Harley Quinn</td>
+<td>18</td>
+<td>$125</td>
+</tr>
+<tr>
+<td>Metroid - Samus Aran</td>
+<td>L</td>
+<td>$850</td>
+</tr>
+<tr>
+<td>Peter Pan</td>
+<td>XS</td>
+<td>$49</td>
+</tr>
+<tr>
+<td>Princess Leia (White)</td>
+<td>10</td>
+<td>$100</td>
+</tr>
+<tr>
+<td>Spock (Star Trek)</td>
+<td>S</td>
+<td>$1235</td>
+</tr>
+</table>
+</div>
+
+<script>
+window.onload = function() {
+  function getScrollTop() {
+    if (typeof window.pageYOffset !== 'undefined' ) {
+      return window.pageYOffset;
+    }
+    var d = document.documentElement;
+    if (d.clientHeight) {
+      return d.scrollTop;
+    }
+    return document.body.scrollTop;
+  }
+  window.onscroll = function() {
+    var sidepanel = document.getElementById('sidepanel'),
+        scroll = getScrollTop();
+    if (scroll <= 28) {
+      sidepanel.style.top = "30px";
+    }
+    else {
+      sidepanel.style.top = (scroll + 2) + "px";
+    }
+  };
+};
+</script>
+</body>
+</html>

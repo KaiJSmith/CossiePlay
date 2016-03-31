@@ -1,0 +1,166 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<style type="text/css">
+    body { 
+		size: 100%;
+		font-family: Arial;
+		margin-left: 9%;
+		background-image: url("http://i.imgur.com/g6HlREg.png");
+		background-size: 100%
+	}
+	#logo { 
+		size: 100%;
+		margin-left: 10%;
+		margin-top: 1%;
+		max-width: 100%;
+		height: auto;
+	}
+	#sidepanel {
+		size: 100%;
+		margin-top: 2%;
+		background-color: white;
+		color: black;
+		text-align: center;
+		position: absolute;
+		top: 80px;
+		left: 20px;
+	}
+	#announcementtextwrapper {
+		margin-top: 1%;
+		margin-left: 10%;
+		width: 70%;
+		height: 80%;
+		text-align: center;
+		border: 2px solid;
+	}
+	#basic {
+		margin-top: 1%;
+		margin-left: 10%;
+		border: 2px solid;
+		width: 70%;
+		text-align: left;
+	}
+	img {
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 5px;
+	}
+	h1 {
+		text-align: center;
+	}
+	h2 {
+		text-align: center;
+	}
+	a:link {
+		color:red;
+	}
+	a:hover {
+		color:#F76A6C;
+	}
+	a:visited {
+		color:#600304;
+	}
+	#clicktoemail {
+		text-align: center;
+	}
+	#galleryimage {
+	   	float:left;
+    	width: 333px;
+	}
+	#galleryimg:hover {
+	 	border: 1px solid #777;
+	}
+</style>
+<title>CossiePlay - Gallery</title>
+</head>
+<body>
+<div id="logo"> 
+<img src="http://i.imgur.com/2YKYJ48.png">
+</div>
+<div id="sidepanel">
+<table border="6" style="width:150px">
+	<tr>
+    <td><a href="HomePage.html">Home</a></td>
+    </tr>
+   	<tr>
+    <td><a href="CostumesPage.html">Costumes</a></td>
+    </tr>
+   	<tr>
+    <td><a href="EventInformationPage.html">Event Information</a></td>
+    </tr>
+    <tr>
+    <td><a href="GalleryPage.html">Gallery</a></td>
+    </tr>
+   	<tr>
+    <td><a href="ContactPage.html">Contact</a></td>
+    </tr>
+
+</table>
+</div>
+<div id="announcementtextwrapper">
+<b>ANOUNCEMENT:</b>
+<p>We have some cool things happening that we want people to know about: this month you can purchase 3 drinks for the price of 2 at the bar.
+First-time party-goers get a 50% discount on entry
+If you get a costume custom made, your next party entry is free if you wear that costume.
+Wear your costume in to KFC on Stanton street and you can get a free drink with a 21-piece bucket. Tell them you’ve been to CossiePlay!</p>
+</div>
+<div id="basic">
+<div id="galleryimage">
+<img src="../images/alice-in-wonderland-872612_1280.jpg" width="300" height="200" alt=""/>
+</div>
+<div id="galleryimage">
+<img src="../images/book-fair-678264_1280.jpg" width="300" height="200" alt=""/>
+</div>
+<div id="galleryimage">
+<img src="../images/boromir-4-1478698.jpg" width="300" height="200" alt=""/>
+</div>
+<div id="galleryimage">
+<img src="../images/devils-570861_1280.jpg" width="300" height="200" alt=""/>
+</div>
+<div id="galleryimage">
+<img src="../images/olaf-630522_1280.jpg" width="300" height="200" alt=""/>
+</div>
+<div id="galleryimage">
+<img src="../images/party-1506740-640x480.jpg" width="300" height="200" alt=""/>
+</div>
+<div id="galleryimage">
+<img src="../images/sewing-hands-1418016.jpg" width="300" height="200" alt=""/>
+</div>
+<div id="galleryimage">
+<img src="../images/spiderman-in-nature-2-1258899-640x480.jpg" width="300" height="200" alt=""/>
+</div>
+<div id="galleryimage">
+<img src="../images/we-re-rabbits-1439192-1279x850.jpg" width="300" height="200" alt=""/>
+</div>
+<div id="galleryimage">
+<img src="../images/winter-kingdom-798279_1920.jpg" width="300" height="200" alt=""/>
+</div>
+</div>
+<script>
+window.onload = function() {
+  function getScrollTop() {
+    if (typeof window.pageYOffset !== 'undefined' ) {
+      return window.pageYOffset;
+    }
+    var d = document.documentElement;
+    if (d.clientHeight) {
+      return d.scrollTop;
+    }
+    return document.body.scrollTop;
+  }
+  window.onscroll = function() {
+    var sidepanel = document.getElementById('sidepanel'),
+        scroll = getScrollTop();
+    if (scroll <= 28) {
+      sidepanel.style.top = "30px";
+    }
+    else {
+      sidepanel.style.top = (scroll + 2) + "px";
+    }
+  };
+};
+</script>
+</body>
+</html>
